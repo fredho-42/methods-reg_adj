@@ -19,7 +19,7 @@ g <- dagitty(
     Sociodemographics -> LTCs
   }')
 
-tiff('./Fig1-DAG.tiff', res=300, height=750, width=1250, compression='lzw')
+tiff('./export/Fig1-DAG.tiff', res=300, height=750, width=1250, compression='lzw')
 plot(g)
 dev.off()
 adjustmentSets(g)

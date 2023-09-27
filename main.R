@@ -1,7 +1,7 @@
 library(tidyverse)
 library(gtsummary)
 
-# dat <- haven::read_dta('./stata/stata13_se/hse16_eul_v5.dta')
+# dat <- haven::read_dta('./data/stata/stata13_se/hse16_eul_v5.dta')
 
 datc <- dat |> 
   transmute(
@@ -49,4 +49,4 @@ tbl_stack(
     m3 |> tbl_regression(include = 'pa')
   )) |> 
   as_flex_table() |> 
-  flextable::save_as_docx(path = 'tab1.docx')
+  flextable::save_as_docx(path = './export/tab1.docx')
